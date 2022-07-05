@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { decrement, increment, reset } from '../store/store.action';
+import { decrement, increment, reset, showMsg } from '../store/store.action';
 import { counterState } from '../store/store.state';
 
 @Component({
@@ -27,6 +27,10 @@ export class ActionCounterComponent implements OnInit {
   
   onReset(){
     this.store.dispatch(reset())
+  }
+
+  showMeg() {
+    this.store.dispatch(showMsg())
   }
 
 }

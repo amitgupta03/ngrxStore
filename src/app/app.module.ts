@@ -23,7 +23,7 @@ import { environment } from 'src/environments/environment';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-   StoreModule.forRoot({count: counterReducer}),
+    StoreModule.forRoot({count: counterReducer}), // this is to initialize the store
     // Instrumentation must be imported after importing StoreModule (config is optional)
     StoreDevtoolsModule.instrument({
       logOnly: environment.production, // Restrict extension to log-only mode

@@ -1,6 +1,6 @@
 import { state } from '@angular/animations';
 import { createReducer, on } from '@ngrx/store';
-import { addCustomValue, decrement, increment, reset, sendString } from './store.action';
+import { addCustomValue, decrement, increment, reset, sendString, showMsg } from './store.action';
 import { initState } from './store.state';
 
 const _counterReducer = createReducer(
@@ -35,6 +35,12 @@ const _counterReducer = createReducer(
         msg: "Welcome now you are PRO!!!",
       };
     }),
+    on(showMsg,(state) => {
+      return {
+        ...state,
+        msg: "Hey this is A Dispaly Message"
+      }
+    })
   );
 
 export function counterReducer(state: any, action: any){
