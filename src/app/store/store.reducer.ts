@@ -35,10 +35,10 @@ const _counterReducer = createReducer(
         msg: "Welcome now you are PRO!!!",
       };
     }),
-    on(showMsg,(state) => {
+    on(showMsg,(state, action) => {
       return {
         ...state,
-        msg: "Hey this is A Dispaly Message"
+        msg: state.msg + action.msg
       }
     })
   );

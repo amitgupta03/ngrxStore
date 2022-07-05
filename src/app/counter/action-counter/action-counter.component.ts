@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { decrement, increment, reset, showMsg } from '../store/store.action';
-import { counterState } from '../store/store.state';
+import { decrement, increment, reset, showMsg } from '../../store/store.action';
+import { counterState } from '../../store/store.state';
 
 @Component({
   selector: 'app-action-counter',
@@ -29,8 +29,8 @@ export class ActionCounterComponent implements OnInit {
     this.store.dispatch(reset())
   }
 
-  showMeg() {
-    this.store.dispatch(showMsg())
+  onShowMeg() {
+    this.store.dispatch(showMsg({msg : "this msg pass as an argumant"}))
   }
 
 }

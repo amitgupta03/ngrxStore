@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { getCounter } from '../store/store.selector';
-import { counterState } from '../store/store.state';
+import { getCounter } from '../../store/store.selector';
+import { counterState } from '../../store/store.state';
 
 @Component({
   selector: 'app-view-counter',

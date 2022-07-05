@@ -5,19 +5,16 @@ import { StoreModule, StoreRootModule } from '@ngrx/store';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { counterReducer } from './store/store.reducer';
-import { ActionCounterComponent } from './action-counter/action-counter.component';
-import { ViewCounterComponent } from './view-counter/view-counter.component';
-import { CustomCounterComponent } from './custom-counter/custom-counter.component';
 import { FormsModule } from '@angular/forms';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from 'src/environments/environment';
+import { HeaderComponent } from './shared/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ActionCounterComponent,
-    ViewCounterComponent,
-    CustomCounterComponent
+    
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
